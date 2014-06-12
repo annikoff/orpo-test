@@ -1,5 +1,13 @@
 <?php
 
+$username='user';
+$password='password';
+if (!isset($_SERVER['PHP_AUTH_USER']) or $_SERVER['PHP_AUTH_USER']!==$username or $_SERVER['PHP_AUTH_PW']!==$password) { 
+    header('WWW-Authenticate: Basic realm="Auth"'); 
+    header('HTTP/1.0 401 Unauthorized'); 
+    exit("Sorry, Access Denied"); 
+}
+
 function __autoload($className) {
       if (file_exists('class_'.$className.'.php')) {
           require_once 'class_'.$className.'.php';
