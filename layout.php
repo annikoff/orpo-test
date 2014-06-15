@@ -43,10 +43,10 @@
         <div class="col-md-7">
             <div class="row-fluid">
                 <div class="col-md-12">
-                    <input ng-disabled="isHidden()" type="text" ng-model="currentCalculation.name" class="form-control" placeholder="Название" />
+                    <input ng-readonly="isHidden()" type="text" ng-model="currentCalculation.name" class="form-control" placeholder="Название" />
                 </div>    
                 <div class="col-md-12">
-                    <textarea ng-disabled="isHidden()" ng-model="currentCalculation.text" class="form-control" placeholder="Секретный расчёт"></textarea>
+                    <textarea ng-readonly="isHidden()" ng-model="currentCalculation.text" class="form-control" placeholder="Секретный расчёт"></textarea>
                 </div>
                 <div class="col-md-12">
                 <div class="panel panel-default">
